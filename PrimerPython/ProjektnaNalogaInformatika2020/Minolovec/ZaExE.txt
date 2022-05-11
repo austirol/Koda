@@ -1,0 +1,23 @@
+NAVODILO ZA USTVARJANJE EXE PROGRAMA(WINDOWS 10)
+
+Namestitev pyinstaller:
+pip install pyinstaller
+pip install --upgrade pyinstaller(za nadgraditi verzijo)
+
+Zaženi v cmd-ju v isti mapi kakor je shranjen python program(v iskalno vrstico
+	znotraj te mape napišemo cmd in pritisnemo ENTER):
+pyinstaller --onefile --icon=Grafika/Ikone/minaBrez.ico -w main.py
+
+Pomembno!:Po končani pretvorbi moramo NUJNO prestaviti exe program izven mape
+	"dist"(zaradi povezav z datotekami v mapi "Grafika". Po tem lahko 
+	izbrišemo mape "_pycache_"; "build" in "dist". izbrišemo lahko tudi
+	datoteko "main.spec"
+Ko končamo z pretvorbo, lahko v mapi "Grafika" v podmapi "Ikone" najdeš ikone za
+	bližnjico, če jo želiš ustvariti(da lahko zaženeš exe program tudi izven
+	mape kejr je shranjen).
+
+OPOMBA!!!!:
+Če želimo narediti exe program, ne smemo vnesiti ostnovnih parametrov z inputom.
+Če želimo na ta način vnesti osnovne parametre pobrišemo iz vrstice "-w"
+(torej napišemo:"pyinstaller --onefile --icon=Grafika/Ikone/minaBrez.ico main.py")
+ostali postopki pa še vedno veljajo.
